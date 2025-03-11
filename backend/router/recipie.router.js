@@ -1,11 +1,13 @@
 import express from "express";
 
-import { changeRecipie, createRecipie, deleteRecipie, getRecipie } from "../controllers/recipie.controller.js";
+import { changeRecipie, createRecipie, deleteRecipie, getAllRecipie, getOneRecipie} from "../controllers/recipie.controller.js";
 
 const router = express.Router()
 
 
-router.get("/", getRecipie)
+router.get("/", getAllRecipie)
+
+router.get("/:id", getOneRecipie)
 
 router.post("/", createRecipie)
 
