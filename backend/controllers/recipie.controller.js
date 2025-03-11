@@ -1,7 +1,7 @@
 import Recipie from '../models/recipie.model.js';
 import mongoose from 'mongoose';
 
-export const getRecipie =  async (req, res) => {
+export const getAllRecipie =  async (req, res) => {
     try {
         const recipies = await Recipie.find({});
         res.status(200).json({success:true, data: recipies});
@@ -9,6 +9,19 @@ export const getRecipie =  async (req, res) => {
         console.log("Error in fetching recipies: ", error.message);
         res.status(500).json({success:false, message: "Server error"})
     }
+}
+
+export const getOneRecipie = async (req, res) => {
+    let idFind = req.params.id;
+    
+    try {
+        let foundRecipie = await Recipie.findById(idFind);
+        res.status(200).json({success:true, data: foundRecipie});
+    } catch (error) {
+        console.log("Error in fetching recipies: ", error.message);
+        res.status(500).json({success:false, message: "Server error"})
+    }
+
 }
 
 export const createRecipie =  async (req,res) => {
