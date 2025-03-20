@@ -1,10 +1,9 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Counter from "../component/buttonIncrease";
 import Navbar from "../component/navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CreateRecipe from "../component/CreateRecipie";
+import GetAllRecipes from "../component/GetAllRecipie";
 
 
 function App() {
@@ -16,7 +15,8 @@ function App() {
     <Routes>
       <Route path="/" element={<h1>Home</h1>}></Route>
       <Route path="/featuring" element={<h1>Featuring</h1>} />
-      <Route path="/recipe" element={<h1>Recipe</h1>} />
+      <Route path="/recipes" element={<GetAllRecipes/>} />
+      <Route path="/create-recipe" element={<CreateRecipe />} />
     </Routes>
     </Router>
 
