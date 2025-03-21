@@ -4,6 +4,7 @@ import Navbar from "../component/navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CreateRecipe from "../component/CreateRecipie";
 import GetAllRecipes from "../component/GetAllRecipie";
+import ShowOneRecipe from "../component/ShowOneRecipe";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/featuring" element={<h1>Featuring</h1>} />
       <Route path="/recipes" element={<GetAllRecipes/>} />
       <Route path="/create-recipe" element={<CreateRecipe />} />
+      <Route path="/recipes/:id" element={<ShowOneRecipe />} />
     </Routes>
     </Router>
 

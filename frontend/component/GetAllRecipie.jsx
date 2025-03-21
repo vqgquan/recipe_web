@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const DisplayRecipes = () => {
   const [recipes, setRecipes] = useState([]); // State to store recipes
@@ -43,6 +44,9 @@ const DisplayRecipes = () => {
                   className="mt-4 w-full h-40 object-cover rounded"
                 />
               )}
+              <Link to = {`/recipes/${recipe._id}`} className="mt-4 inline-block text-blue-500 hover:underline">
+                View details
+              </Link>
             </div>
           ))}
         </div>
