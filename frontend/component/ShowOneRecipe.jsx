@@ -63,7 +63,10 @@ const ShowOneRecipe = () => {
         className="w-full h-60 object-cover rounded mb-6"
       />
       <p className="text-gray-600">{recipe.description}</p>
+      <div className="flex justify-end">
       <button onClick={handleDelete} className="btn btn-soft btn-secondary">Delete recipe</button>
+      </div>
+      
     </div>
   );
 };

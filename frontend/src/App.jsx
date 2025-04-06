@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CreateRecipe from "../component/CreateRecipie";
 import GetAllRecipes from "../component/GetAllRecipie";
 import ShowOneRecipe from "../component/ShowOneRecipe";
+import NotFoundPage from "../component/Notfound";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/recipes" element={<GetAllRecipes/>} />
       <Route path="/create-recipe" element={<CreateRecipe />} />
       <Route path="/recipes/:id" element={<ShowOneRecipe />} />
+      <Route path="/not-found" element={<NotFoundPage/>}/>
     </Routes>
     </Router>
 
